@@ -1,5 +1,6 @@
 ## Ignore anything in the data folder
 data/*
+!data/.gitkeep 
 
 ## Standard Python gitignore from GitHub
 # Byte-compiled / optimized / DLL files
