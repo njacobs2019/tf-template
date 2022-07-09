@@ -8,7 +8,7 @@ For newer instructions, you might want to visit [Official TensorFlow installatio
 
 ### Installing Docker Engine
 Do not use Docker Desktop for this, only the Docker Engine.  Docker Desktop runs containers on a VM (even on Linux) which is slower and makes it harder to install the propper drivers and connections.
-[Official Guide](https://docs.docker.com/engine/install/ubuntu/)
+[Official Guide](https://docs.docker.com/engine/install/ubuntu/).
 
 **Uninstall old versions**
 ```
@@ -48,22 +48,22 @@ $ sudo docker run hello-world
 ```
 
 ### Installing NVIDIA Container Toolkit
-The NVIDIA Container Toolkit now needs to be installed. [Official GitHub](https://github.com/NVIDIA/nvidia-docker) [Official NVIDIA Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
+The NVIDIA Container Toolkit now needs to be installed. [Official GitHub](https://github.com/NVIDIA/nvidia-docker). [Official NVIDIA Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker).
 
 **Requirements**
-1.  GNU/Linux x86_64 with kernel version > 3.10
+1.  GNU/Linux x86_64 with kernel version > 3.10  
 Check by running:  `$ hostnamectl`
     
-2.  Docker >= 19.03 (recommended, but some distributions may include older versions of Docker. The minimum supported version is 1.12)
+2.  Docker >= 19.03 (recommended, but some distributions may include older versions of Docker. The minimum supported version is 1.12)  
 Check by running:  `$ docker -v`
     
 3.  NVIDIA GPU with Architecture >= Kepler (or compute capability 3.0)
     
-4.  [NVIDIA Linux drivers](http://www.nvidia.com/object/unix.html)  >= 418.81.07 (Note that older driver releases or branches are unsupported.)
-Check by running:  `$ nvidia-smi`
+4.  [NVIDIA Linux drivers](http://www.nvidia.com/object/unix.html)  >= 418.81.07 (Note that older driver releases or branches are unsupported.)  
+Check by running:  `$ nvidia-smi`  
 They can be installed on Ubuntu with the **Software & Updates** program under the **Additional Drivers** tab.
 
-5. Check that the gpu is available.
+5. Check that the gpu is available.  
 Run:  `$ lspci | grep -i nvidia`
 
 **Setup the package repository and the GPG key**
