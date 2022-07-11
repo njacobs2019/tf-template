@@ -2,7 +2,8 @@
 
 This repo is a template for creating TensorFlow projects in Docker.
 
-included_repos.txt contains a list of the python packages already installed in the base Tensorflow image
+base_repos.txt contains a list of the python packages already installed in the base Tensorflow image
+additional_repos.txt contains additional repos that will be pip installed into the container
 
 
 # Getting Started
