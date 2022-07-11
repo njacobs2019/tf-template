@@ -15,7 +15,7 @@ This repo is a template for creating TensorFlow projects in Docker.
 
 ## Build the docker container
 ```
-$ docker build –t my-tf:1.3 .
+$ docker build -t my-tf:1.3 .
 ```
 
 
