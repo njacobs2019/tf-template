@@ -6,5 +6,6 @@ COPY ./additional_repos.txt /tf/additional_repos.txt
 RUN pip install -q --no-input -r /tf/additional_repos.txt
 RUN rm /tf/additional_repos.txt
 
+# Copies Test_TF.ipynb
 
 # Connects volumes
