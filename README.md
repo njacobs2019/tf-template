@@ -19,6 +19,12 @@ $ docker build -t my-tf:1.3 .
 ```
 
 
+## Running the container
+```
+docker-compose up
+```
+
+
 ## If docker-compose is not installed:
 Run:  
 ```
