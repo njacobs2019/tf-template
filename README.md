@@ -12,3 +12,15 @@ This repo is a template for creating TensorFlow projects in Docker.
 5. Use Docker compose to start the container.
 6. Check that everything works by running the Test_TF notebook.
 
+
+## Build the docker container
+```
+$ docker build –t my-tf:1.3 .
+```
+
+
+## If docker-compose is not installed:
+Run:  
+```
+$ apt install docker-compose -y
+```
