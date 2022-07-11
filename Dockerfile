@@ -7,5 +7,3 @@ FROM tensorflow/tensorflow:latest-gpu-jupyter
 # copy some files in?
 
 # entry point?
-
-CMD ["jupyter","notebook"]

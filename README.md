@@ -2,6 +2,8 @@
 
 This repo is a template for creating TensorFlow projects in Docker.
 
+included_repos.txt contains a list of the python packages already installed in the base Tensorflow image
+
 
 # Getting Started
 
@@ -21,7 +23,7 @@ $ docker build -t my-tf:1.3 .
 
 ## Running the container
 ```
-docker-compose up
+docker compose up
 ```
 
 
@@ -30,3 +32,14 @@ Run:
 ```
 $ apt install docker-compose -y
 ```
+
+
+## Notes:
+This was originally setup with the following components and resulted in the following environment on 7/11/2022.  
+System:  
+- i7-4770k with NVIDIA 3060ti
+- Ubuntu 20.04.4 LTS
+
+Environment:  
+- Docker version 20.10.17, build 100c701
+- Docker Compose version v2.6.0
