@@ -1,12 +1,17 @@
 version: '2.6'
 services:
   my-tf-container:
-    image: my-tf:1.3
+    image: my-tf:2.9
     ports:
       # Open port for Jupyter notebook
       - 8888:8888
       # Open port for TensorBoard
       - 6006:6006
+    volumes:
+    # Mounts the volume holding the data
+    - ./data:/tf/data
+    # Mounts hte volume holding project code files
+    - ./project:/tf/project
     # Connects all GPU's on Host to the Container
     deploy:
       resources:

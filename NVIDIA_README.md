@@ -1,15 +1,46 @@
 # Installing Docker with NVIDIA Support
+This file provides instructions on how to install Docker with NVIDIA support.
 
-## Why Use Docker with NVIDIA Support
+**Why Docker?**  
 Docker provides a containerized runtime allowing programs to run in isolated environments.  Running TensorFlow inside Docker makes it so that only the GPU device drivers need to be installed on the host machine and it makes it easy to put code into production or move it to another machine.
 
-## Installation Guide
-For newer instructions, you might want to visit [Official TensorFlow installation guide](www.tensorflow.org/install/docker).  This guide assumes we are installing on Ubuntu 20.04 LTS.
+# Installation Guide
+For newer instructions, you might want to visit [Official TensorFlow installation guide](www.tensorflow.org/install/docker).  This guide assumes we are installing on Ubuntu 20.04 LTS.  
 
-### Installing Docker Engine
 Do not use Docker Desktop for this, only the Docker Engine.  Docker Desktop runs containers on a VM (even on Linux) which is slower and makes it harder to install the propper drivers and connections.
-[Official Guide](https://docs.docker.com/engine/install/ubuntu/).
+[Official Guide](https://docs.docker.com/engine/install/ubuntu/).  
 
+## Installing Docker Engine
+
+**Installing from a Script**
+Uninstalling the old versions and installing the new ones can be done with a script.  Otherwise, follow the below commands manually.  Make the script executable if it is not already.  If you run the script, skip to the section **Installing NVIDIA Container Toolkit**.
+```
+$ chmod +x install_docker.sh
+$ sudo ./install_docker.sh
+```
+If it installed sucessfully, you should see the output from the Docker Hello World Image:
+```
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+```
 **Uninstall old versions**
 ```
  $ sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -46,6 +77,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plug
 ```
 $ sudo docker run hello-world
 ```
+The output of this container should match the output shown above when installing from the script.  
 
 ### Installing NVIDIA Container Toolkit
 The NVIDIA Container Toolkit now needs to be installed. [Official GitHub](https://github.com/NVIDIA/nvidia-docker). [Official NVIDIA Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker).
@@ -102,7 +134,6 @@ For more information see [Nvidia.com](https://docs.nvidia.com/deploy/driver-pers
 $ sudo nvidia-smi -pm 1
 ```
 
-
-## Running Containers
+# Running Containers
 -   Take note of your Docker version with  `docker -v`.  On versions  **including and after**  19.03, you will use the  `nvidia-container-toolkit`  package and the  `--gpus all`  flag.
 
